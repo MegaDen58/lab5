@@ -26,16 +26,18 @@ namespace Readers
     class Reader
     {
         private string FIO;
-        int number;
+        int ticket;
         string faculty;
         private string birthday;
+        string number;
 
-        public Reader(string FIO, int number, string faculty, string birthday)
+        public Reader(string FIO, int ticket, string faculty, string birthday, string number)
         {
             this.FIO = FIO; 
-            this.number = number;
+            this.ticket = ticket;
             this.faculty = faculty;
             this.birthday= birthday;
+            this.number = number;
         }
 
         public void takeBook(int bookCount) => Console.WriteLine($"{FIO} взял {bookCount} книги.");
@@ -80,9 +82,9 @@ public class Program
             new Student("Bob", 3, 17) 
         };
 
-        Reader[] readers ={ new Reader("Петров В.В.", 113300, "Математический", "3 февраля 2000"), 
-            new Reader("Иванов Д.А.", 330011, "Философский", "17 ноября 20001"), 
-            new Reader("Кузнецов А.А.", 110033, "Математический", "3 декабря 2007") 
+        Reader[] readers ={ new Reader("Петров В.В.", 113300, "Математический", "3 февраля 2000", "+79632913543"), 
+            new Reader("Иванов Д.А.", 330011, "Философский", "17 ноября 20001", "+79093138444"), 
+            new Reader("Кузнецов А.А.", 110033, "Математический", "3 декабря 2007", "+79653293312") 
         };
 
 
